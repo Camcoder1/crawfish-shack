@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="98" fill="#1a1210"/>
+  <g fill="#e8412e" transform="translate(100,105)">
+    <!-- body -->
+    <ellipse cx="0" cy="0" rx="24" ry="18"/>
+    <!-- head -->
+    <ellipse cx="0" cy="-22" rx="16" ry="14"/>
+    <!-- tail -->
+    <rect x="-18" y="16" width="36" height="10" rx="5"/>
+    <rect x="-14" y="24" width="28" height="9" rx="4.5"/>
+    <path d="M-10 32 Q0 48 10 32Z"/>
+    <!-- left claw -->
+    <path d="M-18 -8 L-42 -30" stroke="#e8412e" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <path d="M-42 -30 L-56 -46" stroke="#e8412e" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M-42 -30 L-58 -34" stroke="#e8412e" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <!-- right claw -->
+    <path d="M18 -8 L42 -30" stroke="#e8412e" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <path d="M42 -30 L56 -46" stroke="#e8412e" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M42 -30 L58 -34" stroke="#e8412e" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <!-- antennae -->
+    <path d="M-6 -34 C-16 -56, -28 -66, -44 -72" stroke="#e8412e" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M6 -34 C16 -56, 28 -66, 44 -72" stroke="#e8412e" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>
