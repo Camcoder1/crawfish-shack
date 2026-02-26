@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     title: "Crawfish Shack | Fresh Cajun Crawfish in Pensacola, FL",
     description:
       "Fresh cajun-style boiled crawfish and seafood in Pensacola, FL. Family-owned, open daily.",
-    url: "https://shack.cameronwblair.com",
+    url: "https://crawfish-shack.com",
     siteName: "Crawfish Shack",
     type: "website",
     locale: "en_US",
   },
   icons: {
-    icon: "/favicon.svg",
-    apple: "/logo.svg",
+    icon: "/favicon.ico",
+    apple: "/logo.jpg",
   },
   robots: { index: true, follow: true },
 };
