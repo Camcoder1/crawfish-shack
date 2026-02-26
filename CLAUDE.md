@@ -62,9 +62,19 @@ npm run build        # Static export → out/
 ```
 
 ## Deployment
+When the user says "deploy" or "push to AWS", run these two steps:
+1. **Deploy to AWS**: `bash deploy.sh` (builds, syncs to S3, invalidates CloudFront)
+2. **Push to GitHub**: `git add -A && git commit && git push origin main`
+
+AWS CLI is already configured — no extra auth needed.
+
 ```bash
 bash deploy.sh       # Full build + S3 sync + CloudFront invalidation
 ```
+
+## GitHub
+- **Repo**: https://github.com/Camcoder1/crawfish-shack
+- **Remote**: `origin` (HTTPS)
 
 ## Cache Strategy
 - HTML files: `public, max-age=0, must-revalidate`
