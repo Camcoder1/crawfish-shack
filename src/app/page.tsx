@@ -152,7 +152,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="flex items-center gap-2">
-            <img src="/logo.svg" alt="Crawfish Shack logo" className="w-9 h-9" />
+            <img src="/logo.jpg" alt="Crawfish Shack logo" className="w-9 h-9 rounded-full object-cover" />
             <span className="font-[family-name:var(--font-playfair)] text-xl font-bold text-cream">
               The Crawfish Shack
             </span>
