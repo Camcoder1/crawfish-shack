@@ -1,31 +1,33 @@
-# The Crawfish Shack — shack.cameronwblair.com
+# The Crawfish Shack — crawfish-shack.com
 
 ## Overview
 Louisiana-themed crawfish shack website. Single-page static Next.js site deployed
-to AWS S3 + CloudFront as a subdomain of cameronwblair.com.
+to AWS S3 + CloudFront. Primary domain: crawfish-shack.com.
 
 ## Tech Stack
 - **Framework**: Next.js 16 (static export)
 - **UI**: React 19, Tailwind CSS 4, Lucide React icons
 - **Fonts**: Playfair Display (display), Source Sans 3 (body)
 - **Hosting**: AWS S3 + CloudFront
-- **DNS**: Route53 (cameronwblair.com hosted zone)
-- **SSL**: ACM wildcard certificate (*.cameronwblair.com)
+- **DNS**: Route53 (crawfish-shack.com hosted zone)
+- **SSL**: ACM wildcard certificate (crawfish-shack.com + *.crawfish-shack.com)
 
 ## AWS Resources
 - **S3 Bucket**: `shack-cameronwblair-com` (us-east-1)
 - **CloudFront Distribution**: `E275PHE7MCHWEB` (d19o4bsuf3ypk2.cloudfront.net)
 - **CloudFront Function**: `shack-url-rewrite` (URL rewriting for SPA routing)
 - **Origin Access Control**: `E2UNY3WC2IGXBE` (S3 access via CloudFront only)
-- **ACM Certificate**: `695e213b-70eb-4357-8193-5dff7f2bf443` (shared wildcard)
-- **Route53 Zone**: `Z06762271E585ETPNMX0G` (cameronwblair.com)
-- **DNS Records**: A + AAAA alias → CloudFront distribution
+- **ACM Certificate**: `7dd2a974-fce2-48e8-ad4a-98631344ebb7` (crawfish-shack.com + wildcard)
+- **Route53 Zone**: `Z03858801N1PFRO423UG7` (crawfish-shack.com)
+- **DNS Records**: A + AAAA alias → CloudFront for crawfish-shack.com + www
+- **Also serves**: shack.cameronwblair.com (same CloudFront distribution)
 - **AWS Account**: 871104587854
 
 ## Architecture
 ```
+Route53: crawfish-shack.com / www.crawfish-shack.com → A/AAAA alias
 Route53: shack.cameronwblair.com → A/AAAA alias
-  → CloudFront (E275PHE7MCHWEB)
+  → CloudFront (E275PHE7MCHWEB, d19o4bsuf3ypk2.cloudfront.net)
     → CloudFront Function (viewer-request): URL rewrite /path → /path/index.html
     → Origin: S3 bucket (shack-cameronwblair-com) via OAC
     → Custom error: 403/404 → /404/index.html
